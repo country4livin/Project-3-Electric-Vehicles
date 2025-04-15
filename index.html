@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Displaying JSON data in Chart.js</title>
+</head>
+
+<body>
+
+    <div class="chart">
+      <div class="chart_types">
+          <button onclick="setChartType('bar')"">Bars</button>
+          <button onclick="setChartType('line')"">Line</button>
+          <button onclick="setChartType('doughnut')"">Doughnut</button>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="chart">
+      <div class="chart_types">
+          <button onclick="setNetworkChartType('bar')"">Bars</button>
+          <button onclick="setNetworkChartType('line')"">Line</button>
+          <button onclick="setNetworkChartType('doughnut')"">Doughnut</button>
+      <canvas id="myNetworkChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+<!-- <script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3, 15],
+        backgroundColor: [
+          'rgb(255,99,132)',
+          'rgb(54,99,132)',
+          'rgb(255,162,132)',
+          'rgb(255,99,232)',
+          'rgb(162,99,132)',
+          'rgb(255,205,132)',
+          'rgb(255,99,86)',
+        ],
+        borderColor: ['255, 255, 255'],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script> -->
