@@ -14,7 +14,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // d3.json(url).then(function(response) {
 
-fetch('test.result.geojson')
+fetch('../static/test.result.geojson')
   .then(res => res.json())
   .then(data => {
     // console.log(data)
@@ -39,7 +39,7 @@ fetch('test.result.geojson')
   }
 
   let heat = L.heatLayer(heatArray, {
-    max: 2000,
+    max: 1500,
     radius: 15,
     blur: 25
   }).addTo(map);
