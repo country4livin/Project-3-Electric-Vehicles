@@ -69,21 +69,5 @@ for (let l=0; l < status_stations.length; l++){
   markerStatus.addTo(status_data)
 }
 // Load the GeoJSON data for US states
-let geoData = "https://raw.githubusercontent.com/adamgibbons/us-states-geojson/master/states.geojson";
+let geoData = "https://github.com/loganpowell/census-geojson/blob/master/GeoJSON/500k/2022/state.json";
 
-// Get the data with d3
-d3.json(geoData).then(function(data) {
-    // Create a new GeoJSON layer
-    L.geoJson(data, {
-        style: {
-            color: "#000",
-            weight: 1,
-            fillOpacity: 0.5
-        },
-        onEachFeature: function(feature, layer) {
-            layer.bindPopup("State: " + feature.properties.name);
-        }
-    }).addTo(myMap);
-}).catch(function(error) {
-    console.error("Error loading the GeoJSON data: ", error);
-});
