@@ -73,6 +73,8 @@ console.log(connectorCounts); // { 'J1772': 2 }
       }]
     },
     options: {
+      responsive: false, // Disables automatic re-sizing of chart based on window size
+      maintainAspectRatio: true, // Allows custom aspect ratio
       scales: {
         x: {
           title: {
@@ -131,6 +133,8 @@ console.log(networkCounts); // { 'J1772': 2 }
       }]
     },
     options: {
+      responsive: false, // Disables automatic re-sizing of chart based on window size
+      maintainAspectRatio: false, // Allows custom aspect ratio
       scales: {
         x: {
           title: {
