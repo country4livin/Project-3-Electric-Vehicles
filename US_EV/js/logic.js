@@ -28,7 +28,7 @@ let overlayMaps = {
 
 // Create the map object with center and zoom options.
 let myMap = L.map("map", {
-  center: [37.09, -95.71],
+  center: [37.8, -96],
   zoom: 4,
   layers: [street, state_data, access_data, status_data]
 });
@@ -68,3 +68,6 @@ for (let l=0; l < status_stations.length; l++){
   // Add the marker to the status_data layergroup
   markerStatus.addTo(status_data)
 }
+// Load the GeoJSON data for US states
+let geoData = "https://github.com/loganpowell/census-geojson/blob/master/GeoJSON/500k/2022/state.json";
+
