@@ -57,7 +57,7 @@ console.log(connectorCounts); // { 'J1772': 2 }
       // labels: data.features.map(feature => feature.properties.ev_connector_types).flat(),
       labels: Object.keys(connectorCounts),
       datasets: [{
-        label: 'EV Connector Types',
+        label: 'Count of EV Connector Types in MN',
         data: Object.values(connectorCounts),
         backgroundColor: [
           'rgba(255, 99, 133, 0.54)', // Red
@@ -127,7 +127,7 @@ console.log(networkCounts); // { 'J1772': 2 }
       // labels: data.features.map(feature => feature.properties.ev_connector_types).flat(),
       labels: Object.keys(networkCounts),
       datasets: [{
-        label: 'Network Types',
+        label: 'Count of EV Network Types in MN',
         data: Object.values(networkCounts),
         borderWidth: 1
       }]
