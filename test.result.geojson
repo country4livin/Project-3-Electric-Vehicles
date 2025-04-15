@@ -1,0 +1,243 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.34157,
+                    44.94961
+                ]
+            },
+            "properties": {
+                "city": "Minneapolis",
+                "reg_count": 2000
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.51584,
+                    43.9671
+                ]
+            },
+            "properties": {
+                "city": "Rochester",
+                "reg_count": 1500
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.51713,
+                    44.75492
+                ]
+            },
+            "properties": {
+                "city": "Shakopee",
+                "reg_count": 100
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.93373,
+                    44.8172
+                ]
+            },
+            "properties": {
+                "city": "Cottage Grove",
+                "reg_count": 100
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.97789,
+                    44.13193
+                ]
+            },
+            "properties": {
+                "city": "Mankato",
+                "reg_count": 100
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.58628,
+                    44.99565
+                ]
+            },
+            "properties": {
+                "city": "Long Lake",
+                "reg_count": 2
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -91.63143,
+                    43.98469
+                ]
+            },
+            "properties": {
+                "city": "Winona",
+                "reg_count": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.21993,
+                    46.83767
+                ]
+            },
+            "properties": {
+                "city": "Duluth",
+                "reg_count": 500
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.22639,
+                    44.05966
+                ]
+            },
+            "properties": {
+                "city": "Owatonna",
+                "reg_count": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.5441,
+                    44.51581
+                ]
+            },
+            "properties": {
+                "city": "Red Wing",
+                "reg_count": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.73467,
+                    46.83637
+                ]
+            },
+            "properties": {
+                "city": "Moorhead",
+                "reg_count": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.99148,
+                    43.6827
+                ]
+            },
+            "properties": {
+                "city": "Austin",
+                "reg_count": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.27414,
+                    44.2973
+                ]
+            },
+            "properties": {
+                "city": "Faribault",
+                "reg_count": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.04226,
+                    45.10181
+                ]
+            },
+            "properties": {
+                "city": "Willmar",
+                "reg_count": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.09433,
+                    47.02368
+                ]
+            },
+            "properties": {
+                "city": "Park Rapids",
+                "reg_count": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -91.7489,
+                    47.98832
+                ]
+            },
+            "properties": {
+                "city": "Ely",
+                "reg_count": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.97982,
+                    45.72308
+                ]
+            },
+            "properties": {
+                "city": "Sauk Centre",
+                "reg_count": 1
+            }
+        }
+    ]
+}
