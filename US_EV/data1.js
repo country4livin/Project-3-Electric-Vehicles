@@ -36,11 +36,6 @@ let state_stations = [
     station_count: 1482
   },
   {
-    state: "DC",
-    location: [38.905985, -77.033418],
-    station_count: 450
-  },
-  {
     state: "DE",
     location: [38.910832, -75.52767],
     station_count: 305
@@ -216,11 +211,6 @@ let state_stations = [
     station_count: 1150
   },
   {
-    state: "TX",
-    location: [31.968599, -99.901813],
-    station_count: 4380
-  },
-  {
     state: "UT",
     location: [39.32098, -111.093731],
     station_count: 1073
@@ -298,12 +288,6 @@ let access_stations = [
     location: [41.603221, -73.087749],
     private: 148.0,
     public: 1334.0
-  },
-  {
-    state: "DC",
-    location: [38.905985, -77.033418],
-    private: 47.0,
-    public: 403.0
   },
   {
     state: "DE",
@@ -516,12 +500,6 @@ let access_stations = [
     public: 1054.0
   },
   {
-    state: "TX",
-    location: [31.968599, -99.901813],
-    private: 221.0,
-    public: 4159.0
-  },
-  {
     state: "UT",
     location: [39.32098, -111.093731],
     private: 44.0,
@@ -613,13 +591,6 @@ let status_stations = [
     Available: 1405.0,
     Planned: 5.0,
     Temporarily_Unavailable: 72.0
-  },
-  {
-    state: "DC",
-    location: [38.905985, -77.033418],
-    Available: 387.0,
-    Planned: 1.0,
-    Temporarily_Unavailable: 62.0
   },
   {
     state: "DE",
@@ -867,13 +838,6 @@ let status_stations = [
     Temporarily_Unavailable: 51.0
   },
   {
-    state: "TX",
-    location: [31.968599, -99.901813],
-    Available: 3990.0,
-    Planned: 60.0,
-    Temporarily_Unavailable: 330.0
-  },
-  {
     state: "UT",
     location: [39.32098, -111.093731],
     Available: 970.0,
@@ -921,5 +885,267 @@ let status_stations = [
     Available: 116.0,
     Planned: 0.0,
     Temporarily_Unavailable: 5.0
+  }
+];
+let ev_df = [
+  {
+    state: "Alabama",
+    location: [32.318231, -86.902298],
+    count: 13000
+  },
+  {
+    state: "Alaska",
+    location: [63.588753, -154.493062],
+    count: 2700
+  },
+  {
+    state: "Arizona",
+    location: [34.048928, -111.093731],
+    count: 89800
+  },
+  {
+    state: "Arkansas",
+    location: [35.20105, -91.831833],
+    count: 7100
+  },
+  {
+    state: "California",
+    location: [36.778261, -119.417932],
+    count: 1256600
+  },
+  {
+    state: "Colorado",
+    location: [39.550051, -105.782067],
+    count: 90100
+  },
+  {
+    state: "Connecticut",
+    location: nan,
+    count: 31600
+  },
+  {
+    state: "Delaware",
+    location: [38.910832, -75.52767],
+    count: 8400
+  },
+  {
+    state: "District of Columbia",
+    location: nan,
+    count: 8100
+  },
+  {
+    state: "Florida",
+    location: [27.664827, -81.515754],
+    count: 254900
+  },
+  {
+    state: "Georgia",
+    location: [32.157435, -82.907123],
+    count: 92400
+  },
+  {
+    state: "Hawaii",
+    location: [19.898682, -155.665857],
+    count: 25600
+  },
+  {
+    state: "Idaho",
+    location: [44.068202, -114.742041],
+    count: 8500
+  },
+  {
+    state: "Illinois",
+    location: [40.633125, -89.398528],
+    count: 99600
+  },
+  {
+    state: "Indiana",
+    location: [40.551217, -85.602364],
+    count: 26100
+  },
+  {
+    state: "Iowa",
+    location: [41.878003, -93.097702],
+    count: 9000
+  },
+  {
+    state: "Kansas",
+    location: [39.011902, -98.484246],
+    count: 11300
+  },
+  {
+    state: "Kentucky",
+    location: [37.839333, -84.270018],
+    count: 11600
+  },
+  {
+    state: "Louisiana",
+    location: nan,
+    count: 8200
+  },
+  {
+    state: "Maine",
+    location: [45.253783, -69.445469],
+    count: 7400
+  },
+  {
+    state: "Maryland",
+    location: [39.045755, -76.641271],
+    count: 72100
+  },
+  {
+    state: "Massachusetts",
+    location: [42.407211, -71.382437],
+    count: 73800
+  },
+  {
+    state: "Michigan",
+    location: [44.314844, -85.602364],
+    count: 50300
+  },
+  {
+    state: "Minnesota",
+    location: [46.729553, -94.6859],
+    count: 37100
+  },
+  {
+    state: "Mississippi",
+    location: [32.354668, -89.398528],
+    count: 3600
+  },
+  {
+    state: "Missouri",
+    location: [37.964253, -91.831833],
+    count: 26900
+  },
+  {
+    state: "Montana",
+    location: [46.879682, -110.362566],
+    count: 4600
+  },
+  {
+    state: "Nebraska",
+    location: [41.492537, -99.901813],
+    count: 6900
+  },
+  {
+    state: "Nevada",
+    location: [38.80261, -116.419389],
+    count: 47400
+  },
+  {
+    state: "New Hampshire",
+    location: [43.193852, -71.572395],
+    count: 9900
+  },
+  {
+    state: "New Jersey",
+    location: [40.058324, -74.405661],
+    count: 134800
+  },
+  {
+    state: "New Mexico",
+    location: [34.97273, -105.032363],
+    count: 10300
+  },
+  {
+    state: "New York",
+    location: [43.299428, -74.217933],
+    count: 131300
+  },
+  {
+    state: "North Carolina",
+    location: [35.759573, -79.0193],
+    count: 70200
+  },
+  {
+    state: "North Dakota",
+    location: [47.551493, -101.002012],
+    count: 1000
+  },
+  {
+    state: "Ohio",
+    location: [40.417287, -82.907123],
+    count: 50400
+  },
+  {
+    state: "Oklahoma",
+    location: [35.007752, -97.092877],
+    count: 22800
+  },
+  {
+    state: "Oregon",
+    location: [43.804133, -120.554201],
+    count: 64400
+  },
+  {
+    state: "Pennsylvania",
+    location: [41.203322, -77.194525],
+    count: 70200
+  },
+  {
+    state: "Rhode Island",
+    location: [41.580095, -71.477429],
+    count: 6400
+  },
+  {
+    state: "South Carolina",
+    location: [33.836081, -81.163725],
+    count: 20900
+  },
+  {
+    state: "South Dakota",
+    location: [43.969515, -99.901813],
+    count: 1700
+  },
+  {
+    state: "Tennessee",
+    location: [35.517491, -86.580447],
+    count: 33200
+  },
+  {
+    state: "Texas",
+    location: [-99.901813, nan],
+    count: 230100
+  },
+  {
+    state: "Utah",
+    location: [39.32098, -111.093731],
+    count: 40000
+  },
+  {
+    state: "Vermont",
+    location: [44.558803, -72.577841],
+    count: 7800
+  },
+  {
+    state: "Virginia",
+    location: [37.431573, -78.656894],
+    count: 84900
+  },
+  {
+    state: "Washington",
+    location: [47.751074, -120.740139],
+    count: 152100
+  },
+  {
+    state: "West Virginia",
+    location: [38.597626, -80.454903],
+    count: 2800
+  },
+  {
+    state: "Wisconsin",
+    location: [43.78444, -88.787868],
+    count: 24900
+  },
+  {
+    state: "Wyoming",
+    location: [43.075968, -107.290284],
+    count: 1100
+  },
+  {
+    state: "United States",
+    location: nan,
+    count: 3555900
   }
 ];
