@@ -7,7 +7,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Load and display the EV charging stations
-fetch('minnesota_stations.geojson')
+fetch('static/js/minnesota_stations.geojson')
   .then(res => res.json())
   .then(data => {
     const geoJsonLayer = L.geoJSON(data, {
