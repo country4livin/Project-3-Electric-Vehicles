@@ -36,6 +36,11 @@ let state_stations = [
     station_count: 1482
   },
   {
+    state: "DC",
+    location: [38.905985, -77.033418],
+    station_count: 450
+  },
+  {
     state: "DE",
     location: [38.910832, -75.52767],
     station_count: 305
@@ -211,6 +216,11 @@ let state_stations = [
     station_count: 1150
   },
   {
+    state: "TX",
+    location: [31.968599, -99.901813],
+    station_count: 4380
+  },
+  {
     state: "UT",
     location: [39.32098, -111.093731],
     station_count: 1073
@@ -288,6 +298,12 @@ let access_stations = [
     location: [41.603221, -73.087749],
     private: 148.0,
     public: 1334.0
+  },
+  {
+    state: "DC",
+    location: [38.905985, -77.033418],
+    private: 47.0,
+    public: 403.0
   },
   {
     state: "DE",
@@ -500,6 +516,12 @@ let access_stations = [
     public: 1054.0
   },
   {
+    state: "TX",
+    location: [31.968599, -99.901813],
+    private: 221.0,
+    public: 4159.0
+  },
+  {
     state: "UT",
     location: [39.32098, -111.093731],
     private: 44.0,
@@ -591,6 +613,13 @@ let status_stations = [
     Available: 1405.0,
     Planned: 5.0,
     Temporarily_Unavailable: 72.0
+  },
+  {
+    state: "DC",
+    location: [38.905985, -77.033418],
+    Available: 387.0,
+    Planned: 1.0,
+    Temporarily_Unavailable: 62.0
   },
   {
     state: "DE",
@@ -836,6 +865,13 @@ let status_stations = [
     Available: 1093.0,
     Planned: 6.0,
     Temporarily_Unavailable: 51.0
+  },
+  {
+    state: "TX",
+    location: [31.968599, -99.901813],
+    Available: 3990.0,
+    Planned: 60.0,
+    Temporarily_Unavailable: 330.0
   },
   {
     state: "UT",
