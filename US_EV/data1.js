@@ -920,7 +920,7 @@ let ev_df = [
   },
   {
     state: "Connecticut",
-    location: nan,
+    location: [41.603221, -73.087749],
     count: 31600
   },
   {

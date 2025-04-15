@@ -28,7 +28,7 @@ let overlayMaps = {
 
 // Create the map object with center and zoom options.
 let myMap = L.map("map", {
-  center: [37.09, -95.71],
+  center: [37.8, -96],
   zoom: 4,
   layers: [street, state_data, access_data, status_data]
 });
@@ -68,3 +68,22 @@ for (let l=0; l < status_stations.length; l++){
   // Add the marker to the status_data layergroup
   markerStatus.addTo(status_data)
 }
+// Load the GeoJSON data for US states
+let geoData = "https://raw.githubusercontent.com/adamgibbons/us-states-geojson/master/states.geojson";
+
+// Get the data with d3
+d3.json(geoData).then(function(data) {
+    // Create a new GeoJSON layer
+    L.geoJson(data, {
+        style: {
+            color: "#000",
+            weight: 1,
+            fillOpacity: 0.5
+        },
+        onEachFeature: function(feature, layer) {
+            layer.bindPopup("State: " + feature.properties.name);
+        }
+    }).addTo(myMap);
+}).catch(function(error) {
+    console.error("Error loading the GeoJSON data: ", error);
+});
