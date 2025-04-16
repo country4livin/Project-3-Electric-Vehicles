@@ -24,12 +24,12 @@ fetch('./package.json')
   createChart(data, 'bar');
   createNetworkChart(data, 'bar');
 });
-
+// Remove the old chart type and create a new one
 function setChartType(chartType){
   myChart.destroy();
   createChart(jsonData, chartType);
 }
-
+// Function to create the chart to count connector types in MN
 function createChart(data, type){
   const connectorCounts = {}; // Empty object to store counts
 
@@ -47,7 +47,7 @@ function createChart(data, type){
       }
   }
 
-console.log(connectorCounts); // { 'J1772': 2 }
+console.log(connectorCounts);
 
 // Connector Types chart
   myChart = new Chart(ctx, {
@@ -95,12 +95,12 @@ console.log(connectorCounts); // { 'J1772': 2 }
 };
 
 
-// EV Network Chart
+// Remove the previous chart type and build a new one
 function setNetworkChartType(chartType){
   myNetworkChart.destroy();
   createNetworkChart(jsonData, chartType);
 }
-
+// function to create the count of Networks chart
 function createNetworkChart(data, type){
   const networkCounts = {}; // Empty object to store counts
   // loop through the json data and make a dictonary of ev networks
@@ -118,7 +118,7 @@ function createNetworkChart(data, type){
       }
   }
 
-console.log(networkCounts); // { 'J1772': 2 }
+console.log(networkCounts);
 
   myNetworkChart = new Chart(ctxNetwork, {
     type: type,
