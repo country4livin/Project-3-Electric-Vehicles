@@ -1,9 +1,5 @@
-// Create the 'basemap' tile layer that will be the background of our map.
-// OPTIONAL: Step 2
-// // Create the layer groups, base maps, and overlays for our two sets of data..
-// Add a control to the map that will allow the user to change which layers are visible.
-  
-// Grayscale layer - Need help
+// Create the 'basemap' tile layer that will be the background of our map.  
+// Grayscale layer
 let street = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -16,9 +12,9 @@ let status_data = new L.LayerGroup();
 
 // Create the map object with center and zoom options.
 let myMap = L.map("map", {
-  center: [37.8, -96],
-  zoom: 4,
-  layers: [street, state_data, access_data, status_data]
+  center: [44.58, -103.46],
+  zoom: 4.3,
+  layers: [street] // Start only with EV Vehicles
 });
 
 // Adding Color Gradient for State by number of registered EVs
@@ -62,38 +58,31 @@ let baseMaps = {
 // Create a layer control that contains our baseMaps.
 // Pass in baseMaps and overlayMaps
 L.control.layers(baseMaps, overlayMaps, {
-  collapsed: false
+  collapsed: false,
 }).addTo(myMap);
 
 
-// Looping through the states array, create one marker for each state,
-// bind a popup containing its name and station, and add it to the map.
-for (let i = 0; i < state_stations.length; i++) {
-  let state = state_stations[i];
-  let markerState = L.marker(state.location)
-    .bindPopup(`<h1>${state.state}</h1><hr><h3>Stations ${state.station_count.toLocaleString()}</h3>`);
-  // Add the marker to the state_data layergroup
-  markerState.addTo(state_data);
+// Function to show states, access, and status array to create a one marker for each state
+function addMarkersToMap(state_stations, layerGroup, popupContent){
+  for (let i = 0; i < state_stations.length; i++){
+    let station = state_stations[i];
+    let marker = L.marker(station.location)
+      .bindPopup(popupContent(station));
+    marker.addTo(layerGroup);
+  }
 }
 
-// Looping through the access array, create one marker for each state,
-// bind a popup containing its access and state station, and add it to the map
-for (let i = 0; i < access_stations.length; i++) {
-  let access = access_stations[i];
-  let markerAccess = L.marker(access.location)
-    .bindPopup(`<h3>${access.state}</h3><hr><h3>Private: ${access.private.toLocaleString()}</h3><hr><h3>Public: ${access.public.toLocaleString()}</h3>`);
-  markerAccess.addTo(access_data);
-}
+// Define popup content for states, access, and status
+const statePopupContent = (state) => `<h3>${state.state}</h3><hr><p>Stations: ${state.station_count.toLocaleString()}</p>`;
+const accessPopupContent = (access) => `<h3>${access.state}</h3><hr><p>Private Stations: ${access.private.toLocaleString()}</p><p>Public Stations: ${access.public.toLocaleString()}</p>`;
+const statusPopupContent = (status) => `<h3>${status.state}</h3><hr><p>Available Stations: ${status.Available.toLocaleString()}</p><p>Planned Stations: ${status.Planned.toLocaleString()}</p><p>Temporarily Unavailable Stations: ${status.Temporarily_Unavailable.toLocaleString()}</p>`;
 
-// Looping through the status array, create one marker for each state,
-// bind a popup containing its status and state station, and add it to the map
-for (let l=0; l < status_stations.length; l++){
-  let status = status_stations[l];
-  let markerStatus = L.marker(status.location)
-    .bindPopup(`<h3>${status.state}</h3><hr><h3>Available: ${status.Available.toLocaleString()}</h3><hr><h3>Planned: ${status.Planned.toLocaleString()}</h3><hr><h3>Temporarily Unavailable: ${status.Temporarily_Unavailable.toLocaleString()}</h3>`);
-  // Add the marker to the status_data layergroup
-  markerStatus.addTo(status_data)
-}
+// Add markers for each type of station
+addMarkersToMap(state_stations, state_data, statePopupContent);
+addMarkersToMap(access_stations, access_data, accessPopupContent);
+addMarkersToMap(status_stations, status_data, statusPopupContent);
+
+
 //Hover over control for state EV registrations
 function highlightFeature(e) {
   var layer = e.target;
@@ -140,7 +129,7 @@ info.onAdd = function (map) {
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
     this._div.innerHTML = '<h4>Registered EVs by State</h4>' +  (props ?
-        '<b>' + props.name + '</b><br />' + props.density + ' EVs'
+        '<b>' + props.name + '</b><br />' + props.density.toLocaleString() + ' EVs'
         : 'Hover over a state');
 };
 
@@ -169,6 +158,4 @@ legend.onAdd = function (map) {
 };
 
 legend.addTo(myMap);
-// Load the GeoJSON data for US states
-let geoData = "https://github.com/loganpowell/census-geojson/blob/master/GeoJSON/500k/2022/state.json";
 
