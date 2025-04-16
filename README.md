@@ -1,4 +1,4 @@
-# Project-3-Electric-Vehicles-and-Charging-Stations
+# Project 3 - Electric Vehicles and Charging Stations
 
 ## United States Map by State of Electric Vehicles (EV) and Charging Stations (Stations)
 Open up the index.html for the interactive leaflet map showing the registered EVs and Stations.  
