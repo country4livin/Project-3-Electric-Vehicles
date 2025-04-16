@@ -1,0 +1,45 @@
+/* Remove the default margin and padding from the body. */
+body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  #map,
+  body,
+  html {
+    height: 100%;
+  }
+  
+  /* Info box styling */
+  .info {
+    padding: 4px;
+    margin: 0px 0 8px 0;
+    background: white;
+    border: 1px solid #444;
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    font: 14px/16px Arial, Helvetica, sans-serif;
+  }
+  
+  .info h4 {
+    margin: 0 0 4px 0;
+  }
+  
+  /* Legend styling */
+  .legend {
+    line-height: 18px;
+    color: #555;
+  }
+  
+  .legend i {
+    width: 18px;
+    height: 15px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+  }
+  
+  
+  h1 {
+    text-align: center;
+  }
