@@ -175,3 +175,6 @@ cython_debug/
 
 # ignore the node_modules created when you install charts.js
 node_modules/
+
+# Ignore DS Store files
+.DS_Store
