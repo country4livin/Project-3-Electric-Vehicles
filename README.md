@@ -5,7 +5,7 @@ Open up the index.html for the interactive leaflet map showing the registered EV
 You can check the box of which overalymap you would like to see layered ontop off the Registered EVs by State.  
 - The State Station will provide you information on how many charging stations there are per state.  
 - The Access Station will provide you information on how many private or public charging stations there are per state.  
-- The Status Station will provice you information on how many available, planned, temporarily unavailable charging stations there are per state.  
+- The Status Station will provide you information on how many available, planned, temporarily unavailable charging stations there are per state.  
 
 #### Code Source
 Jupyter code (evRegistration.ipynb) within US_EV.  
