@@ -5,7 +5,6 @@ Google Slides deck: https://docs.google.com/presentation/d/1YB1K3iksYkWmoLRuVQ8l
 ### General Instructions
 1. Open up site.html for the interactive leaflet map showing the registered EVs and Stations.
 2. Hovering over each county provides the county name and number of registered EVs.
-3. A check box is available to see the stations layered on top of the Registered EVs by County.
 3. Clicking on any station provides the following information: station name and address, type and number of chargers.
 ### Code Source
 - Jupyter code (MN_evreg2.ipynb) within MN_map folder
