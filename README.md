@@ -15,7 +15,7 @@ logic.js (web development project setup serves as the backbone of the JavaScript
 ### Dependencies, Data Input, and Data Clean Up
 Imported all dependencies and read in data CSV files.  
 Datasets:  
-1.  US Dept of Energy for registered EVs per state
+1.  US Dept of Energy for registered EVs per state (https://afdc.energy.gov/vehicle-registration?year=2023)
 2. Charging Stations (stations) snapshot of April 11, 2025 for all electric charging stations in the United States and Puerto Rico provided by the National Renewable Energy Laboratory (https://afdc.energy.gov/data_download). Data was downloaded as a csv file. The input file exceeds GitHub free version upload limit and it was not uploaded to the repository, however, schema.sql outputs summarize snapshot.  
 - Used schema.sql (pg4Admin) to clean up stations snapshot and generate summation by state, access, status, and stations (count). Ouput files generated are state_stations.csv, access_stations.csv, and status_stations.csv which are saved in the US_EV/Ouput folder.  
 3. Used State_Coordinates.csv to find the coordinates for each state, file can be found in the US_EV/Output folder.  
