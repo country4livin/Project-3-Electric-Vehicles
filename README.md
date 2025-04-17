@@ -2,7 +2,7 @@
 
 ## United States Map by State of Electric Vehicles (EV) and Charging Stations (Stations)
 Open up the index.html for the interactive leaflet map showing the registered EVs and Stations.  
-You can check the box of which overalymap you would like to see layered ontop off the Registered EVs by State.  
+You can check the box of which overlay map you would like to see layered on top of the Registered EVs by State.  
 - The State Station will provide you information on how many charging stations there are per state.  
 - The Access Station will provide you information on how many private or public charging stations there are per state.  
 - The Status Station will provide you information on how many available, planned, temporarily unavailable charging stations there are per state.  
