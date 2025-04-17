@@ -35,11 +35,14 @@ body {
   font: 14px/16px Arial, Helvetica, sans-serif;
 }
   
+
+
 .info h4 {
   margin: 0 0 4px 0;
 }
   
-  /* Legend styling */
+  
+/* Legend styling */
 .legend {
   line-height: 18px;
   color: #555;
