@@ -6,7 +6,7 @@ let myNetworkChart;
 let jsonData;
   
 // Pull the .json data
-fetch('./package.json')
+fetch('static/package.json')
 .then(function(response){
   if(response.ok){
     return response.json();

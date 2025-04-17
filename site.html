@@ -1,17 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
-  <title>EV Dashboard</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EV Dashboard</title>
 
-  <!-- Leaflet Stylesheet -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="" />
 
-  <!-- Minnesota Map CSS -->
-<link rel="stylesheet" href="final_static/css/style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    header.page {
+      text-align: center;
+      padding: 20px;
+
+    }
+
+    h1, h2 {
+      margin: 0.5em 0;
+    }
+
+    #mn-map, #map {
+      height: 600px;
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border: 1px solid #cbd5e0;
+    }
+
+    .chart_types {
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+  </style> 
 </head>
+
+
 <body>
   <header class="page header">
     <h1>EV Cars and Charging Stations</h1>
@@ -26,18 +69,48 @@
   </header>
 
   <!-- US Map -->
+  <div id="map"></div>
 
-
+  <header class="page header">
+    <h2>Visualizing EV Connector and Network Types in Minnesota</h2>
+  </header>
 
   <!-- Charts -->
+  <div class="chart">
+    <div class="chart_types">
+        <button onclick="setChartType('bar')">Bars</button>
+        <button onclick="setChartType('line')">Line</button>
+        <button onclick="setChartType('doughnut')">Doughnut</button>
+    <canvas id="myChart" width="600" height="400"></canvas>
+  </div>
+
+  <div class="chart">
+    <div class="chart_types">
+        <button onclick="setNetworkChartType('bar')">Bars</button>
+        <button onclick="setNetworkChartType('line')">Line</button>
+        <button onclick="setNetworkChartType('doughnut')">Doughnut</button>
+    <canvas id="myNetworkChart" width="600" height="400"></canvas>
+  </div> 
 
   <!-- Leaftleft script -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  
+
   <!-- MN Map scripts -->
-  <script src="minnesota_maps/static/js/logic.js"></script>
-  <script src="static/js/evcountymap.js"></script>
+
   <script src="static/js/data.js"></script>
+  <script src="static/js/logic1.js"></script>
+
+  <!-- D3 JavaScript -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- US JavaScript -->
+  <script type="text/javascript" src="US_map/data1.js"></script>
+  <script type="text/javascript" src="US_map/js/logic.js"></script>
+
+  <!-- Chart Javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="Charts/chartsScript.js"></script>
+
 
 </body>
 </html>
