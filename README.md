@@ -50,6 +50,8 @@ By looking at the registered EVs per state:
 - We found California has the most registered EVs with 1,256,600, which is about a million more than the next highest state, Florida which has 254,900.  
 - MN is 21 on the list for registered EVs.  
 - ND is the lowest with 1000 registered EVs.
+![evStates_figure](https://github.com/user-attachments/assets/2d0de1fa-bc8e-45c2-9726-3cd4d9f71af2)
+
 ### Charging Stations (Stations):
 #### Processing
 1. Created a schema.sql to read snapshot input csv file. Within schema.sql cleaned and transformed the data to provide:  
