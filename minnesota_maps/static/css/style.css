@@ -27,7 +27,7 @@ body {
   color: #333;
 }
 
-#map {
+#mn-map, #us-map {
   height: 600px;
   width: 90%;
   max-width: 1000px;
@@ -36,3 +36,4 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   border: 1px solid #cbd5e0;
 }
+

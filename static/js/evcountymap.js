@@ -2,7 +2,7 @@
 // let geoData = "mn_minnesota_zip_codes_geo.min.json";
 
 // Initialize the map centered on the US
-const myMap = L.map('map').setView([44.977753, -93.265015], 7);
+const myMap = L.map('mn-map').setView([44.977753, -93.265015], 7);
 // let myMap = L.map("map", {
 //   center: [-32.8, 117.9],
 //   zoom: 7
