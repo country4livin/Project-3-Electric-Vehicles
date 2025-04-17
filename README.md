@@ -1,4 +1,5 @@
 # Project 3 - Electric Vehicles and Charging Stations
+Google Slides deck: https://docs.google.com/presentation/d/1YB1K3iksYkWmoLRuVQ8lT0t310sjqO-lQ-xqZIn3sDk/edit?slide=id.gc6f980f91_0_0#slide=id.gc6f980f91_0_0
 
 ## Minnesota Map by County of Electric Vehicles (EV) and Charging Stations (Stations)
 ### General Instructions
@@ -81,8 +82,9 @@ By looking at a snapshot of charging stations as of April 11, 2025 provided by e
  - Two charts are populated using the MN Charging station json data, Count of EV Connector Types in MN and Count of EV Network Types in MN.
  - These charts provide valuable insight to the EV charging stations in MN.
 ### Using and Interacting with the charts
- - To view the charts, open the repo with VisualStudio and right-click on chartsIndex.HTML, then select Open in live Server.
+ - To view the charts, open the repo with VisualStudio and right-click on site.HTML, then select Open in live Server.
  - A webpage will launch and the charts will automatically render with the data from the json file.
+ - Scroll down to view the charts. Click on the buttons Bars, Line, and Doughnut to view each type of graph.  
 ### Ethical Considerations
  - This data is publicly available from the website https://afdc.energy.gov/ and is used in a manner consistent with the terms and conditions stated on their page.
  - While the data includes publicly available phone numbers for EV charging stations, the dataset does not contain personally identifiable information for employees at that station.
