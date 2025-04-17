@@ -45,8 +45,11 @@ By looking at the registered EVs per state:
 #### Analysis:
 By looking at a snapshot of charging stations as of April 11, 2025 provided by evRegistration.ipynb: 
 - We found California has the most stations with 20,038 and Alaska has the lowest stations with 74.  
+![alt text](US_map/Output/chargingstations_byState.png)
 - US has 94.4% public charging stations.  
+![alt text](US_map/Output/chargingstations_Access.png)
 - US has 92.5% available charging stations in snapshot.
+![alt text](US_map/Output/chargingstations_Status.png)
 # References:
 Datasets stated in subcategories.  
 Guidance on overlaymaps, jupyter notebook tabular table, and JavaScript coding was sourced from theXpert Learning Assistant Chat+, an AI Learning tool for Edx.  
