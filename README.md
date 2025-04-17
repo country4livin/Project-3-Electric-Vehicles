@@ -1,5 +1,27 @@
 # Project 3 - Electric Vehicles and Charging Stations
 
+## Minnesota Map by County of Electric Vehicles (EV) and Charging Stations (Stations)
+### General Instructions
+1. Open up site.html for the interactive leaflet map showing the registered EVs and Stations.
+2. Hovering over each county provides the county name and number of registered EVs.
+3. A check box is available to see the stations layered on top of the Registered EVs by County.
+3. Clicking on any station provides the following information: station name and address, type and number of chargers.
+### Code Source
+- Jupyter code (MN_evreg2.ipynb) within MN_map folder
+- site.html (interactive leaflet map) 
+- logic1.js (web development project setup serves as the backbone of the JavaScript codebase) within static/js folder
+### Dependencies, Data Input, and Data Clean Up
+#### MN EV Registrations
+- Accessed MN Public Utilities Commission website for EV registration data (https://mn.gov/puc/activities/economic-analysis/electric-vehicles/).
+- Saved download as "2023_EV_Registration_Data.xlsx" in Resources folder.
+#### MN County Mapping Information
+- Accessed public.opendatasoft.com to obtain geoJson file of MN county boundary information for base map: (https://public.opendatasoft.com/explore/dataset/georef-united-states-of-america-county/export/?flg=en-us&disjunctive.ste_code&disjunctive.ste_name&disjunctive.coty_code&disjunctive.coty_name&refine.ste_name=Minnesota).
+- Saved data as "georef-united-states-of-america-county.geojson" in Resources folder.
+- Registration counts were included in geojson as "density" to drive the color gradient and saved as "data.js" in the "static/js" folder.
+#### MN Charging Station Information
+- Charging Stations snapshot as of April 1, 2025 for all electric charging stations in Minnesota provided by the National Renewable Energy Laboratory (https://afdc.energy.gov/data_download).
+- Saved to "minnesota_stations.geojson" in "static/js" folder.
+
 ## United States Map by State of Electric Vehicles (EV) and Charging Stations (Stations)
 Open up the index.html for the interactive leaflet map showing the registered EVs and Stations.  
 A check box is available to see the stations layered on top of the Registered EVs by State.  
@@ -50,7 +72,25 @@ By looking at a snapshot of charging stations as of April 11, 2025 provided by e
 ![alt text](US_map/Output/chargingstations_Access.png)
 - US has 92.5% available charging stations in snapshot.
 ![alt text](US_map/Output/chargingstations_Status.png)
-# References:
-Datasets stated in subcategories.  
-Guidance on overlaymaps, jupyter notebook tabular table, and JavaScript coding was sourced from theXpert Learning Assistant Chat+, an AI Learning tool for Edx.  
-Used google for leaftlet maps and marker functions accessed April 2025. 
+
+## Charts Features
+### Project and Purpose
+ - The Charts feature uses a library not covered in class, Charts.js.
+ - Two charts are populated using the MN Charging station json data, Count of EV Connector Types in MN and Count of EV Network Types in MN.
+ - These charts provide valuable insight to the EV charging stations in MN.
+### Using and Interacting with the charts
+ - To view the charts, open the repo with VisualStudio and right-click on chartsIndex.HTML, then select Open in live Server.
+ - A webpage will launch and the charts will automatically render with the data from the json file.
+### Ethical Considerations
+ - This data is publicly available from the website https://afdc.energy.gov/ and is used in a manner consistent with the terms and conditions stated on their page.
+ - While the data includes publicly available phone numbers for EV charging stations, the dataset does not contain personally identifiable information for employees at that station.
+ - Privately-owned EV charging stations (such as in a homeowner’s garage) are not included in this dataset.
+## References
+ - This data is publicly available on the website https://afdc.energy.gov/.
+ - US Department of Energy. “EERE: Alternative Fuels Data Center Home Page.” Energy.gov, 	2019, afdc.energy.gov/.
+ - The code used to render the charts was developed, in part, from the chartjs.org website https://www.chartjs.org/docs/latest/getting-started/.
+ - “Step-By-Step Guide | Chart.js.” Www.chartjs.org, chartsjs.org, 15 Apr. 2025, www.chartjs.org/docs/latest/getting-started/usage.html. Accessed 16 Apr. 2025.
+ - Additional features from the chart.js library were combined to display the json data to improve the user experience.
+- Datasets stated in subcategories.  
+- Guidance on overlaymaps, jupyter notebook tabular table, and JavaScript coding was sourced from theXpert Learning Assistant Chat+, an AI Learning tool for Edx.  
+- Used google for leaftlet maps and marker functions accessed April 2025. 
