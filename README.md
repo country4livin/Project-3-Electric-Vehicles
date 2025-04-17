@@ -2,7 +2,7 @@
 
 ## United States Map by State of Electric Vehicles (EV) and Charging Stations (Stations)
 Open up the index.html for the interactive leaflet map showing the registered EVs and Stations.  
-You can check the box of which overlay map you would like to see layered on top of the Registered EVs by State.  
+A check box is available to see the stations layered on top of the Registered EVs by State.  
 - The State Station will provide you information on how many charging stations there are per state.  
 - The Access Station will provide you information on how many private or public charging stations there are per state.  
 - The Status Station will provide you information on how many available, planned, temporarily unavailable charging stations there are per state.  
@@ -23,6 +23,11 @@ Datasets:
 ### Electric Vehicles (EV)
  1. Web scraped the data from the US Dept. of Energy to put into a dataframe then combined it with US States geojson (https://leafletjs.com/examples/choropleth/) for the state borders to highlight/color each state based on the number of registered EVs(density). Uploaded it to the data1.js file.
  2. Added color gradients for registered EVs per state to the Leaflet map in logic.js that includes a legend and a hover over feature to show the exact number of registered EVs for the selected state (code source- https://leafletjs.com/examples/choropleth/).
+#### Analysis
+By looking at the registered EVs per state:  
+- We found California has the most registered EVs with 1,256,600, which is about a million more than the next highest state, Florida which has 254,900.  
+- MN is 21 on the list for registered EVs.  
+- ND is the lowest with 1000 registered EVs.
 ### Charging Stations (Stations):
 #### Processing
 1. Created a schema.sql to read snapshot input csv file. Within schema.sql cleaned and transformed the data to provide:  
@@ -42,7 +47,7 @@ By looking at a snapshot of charging stations as of April 11, 2025 provided by e
 - We found California has the most stations with 20,038 and Alaska has the lowest stations with 74.  
 - US has 94.4% public charging stations.  
 - US has 92.5% available charging stations in snapshot.
-By looking at the registered EVs per state:
-- We found California has the most registered EVs with 1,256,600, which is about a million more than the next highest state, Florida which has 254,900.  
-- MN is 21 on the list for registered EVs  
-- ND is the lowest with 1000 registered EVs.
+# References:
+Datasets stated in subcategories.  
+Guidance on overlaymaps, jupyter notebook tabular table, and JavaScript coding was sourced from theXpert Learning Assistant Chat+, an AI Learning tool for Edx.  
+Used google for leaftlet maps and marker functions accessed April 2025. 
